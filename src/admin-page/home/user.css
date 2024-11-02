@@ -110,11 +110,6 @@
     }
 }
 
-.container {
-    max-width: 1200px;
-    margin: 0 auto;
-}
-
 .stats-container {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
@@ -188,7 +183,69 @@
     font-size: 18px;
 }
 
+
 canvas {
     width: 100% !important;
     height: 300px !important;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f5f5f5;
+    align-items: center;
+    flex-direction: column;
+    height: 100vh;
+}
+
+body .container-utama{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+#userTable{
+    margin-bottom: 70px;
+}
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th, td {
+    padding: 12px;
+    text-align: center;
+    border-bottom: 1px solid #ddd;
+}
+
+th {
+    background-color: #4CAF50;
+    color: white;
+}
+
+tr:hover {
+    background-color: #f1f1f1;  
+}
+
+h1 {
+    justify-content: center;
+    align-items: center;
+    margin: 20px 0;
+    color: #333;
+}
+
+.action-btn {
+    padding: 6px 12px;
+    margin-right: 5px;
+    border: none;
+    color: white;
+    cursor: pointer;
+    border-radius: 4px;
+}
+
+.edit-btn {
+    background-color: #ffa500; /* Warna oranye untuk tombol edit */
+}
+
+.delete-btn {
+    background-color: #ff4d4d; /* Warna merah untuk tombol delete */
 }
