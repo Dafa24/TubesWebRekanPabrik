@@ -169,6 +169,7 @@ li a:hover::after {
   border: transparent;
   margin-top: 20px;
   border-radius: 10px;
+  cursor: pointer;
 }
 
 .footer {
@@ -287,4 +288,11 @@ li a:hover::after {
   .slider-wrapper .swiper-slide-button{
       display: none;
   }
+}
+
+.error {
+  color: red;
+  font-size: 12px;
+  margin-top: 5px;
+  display: none;
 }
