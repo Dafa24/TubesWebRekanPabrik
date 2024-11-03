@@ -5,7 +5,6 @@ function scrollFunction() {
   
   if (document.body.scrollTop > 80 || document.documentElement.scrollTop > 90) {
     navbar.style.backgroundColor = "rgba(255, 255, 255, 0.28);";
-    //navbar.style.backgroundColor = "rgba(4, 41, 58, 1)";
     navbar.style.boxShadow = "0 4px 30px rgba(0, 0, 0, 0.1)";
     navbar.style.backdropFilter = "blur(7.9px)";
     navbar.style.webkitBackdropFilter = "blur(7.9px)";
