@@ -1,9 +1,127 @@
-window.onscroll = function () {
-  scrollFunction();
-};
-
-function scrollFunction() {
+document.addEventListener("DOMContentLoaded", () => {
   const navbar = document.getElementById("navbar");
+
+  const formContact = document.getElementById("formContact");
+
+  window.onscroll = function () {
+    scrollFunction(navbar);
+  };
+
+  const swiper = new Swiper('.slider-wrapper', {
+
+    loop: true,
+    grabCursor: true,
+    spaceBetween: 30,
+  
+    pagination: {
+      el: '.swiper-pagination',
+      clickable: true,
+      dynamicBullets: true
+    },
+  
+  
+    navigation: {
+      nextEl: '.swiper-button-next',
+      prevEl: '.swiper-button-prev',
+    },
+    breakpoints: {
+      0: {
+        slidesPerView: 1
+      },
+      768: {
+        slidesPerView: 2
+      },
+      1024: {
+        slidesPerView: 3
+      }
+    }
+  
+  });
+
+  formContact.addEventListener("submit", function (event) {
+    event.preventDefault(); // Mencegah pengiriman form jika ada error
+  
+    let hasError = false;
+  
+    // Validasi First Name
+    const firstName = document.getElementById("Fname");
+    const firstNameError = document.getElementById("FnameError");
+    if (firstName.value.trim() === "") {
+      firstNameError.textContent = "First name is required.";
+      firstNameError.style.display = "block";
+      hasError = true;
+    } else {
+      firstNameError.textContent = "";
+      firstNameError.style.display = "none";
+    }
+  
+    // Validasi Last Name
+    const lastName = document.getElementById("Lname");
+    const lastNameError = document.getElementById("LnameError");
+    if (lastName.value.trim() === "") {
+      lastNameError.textContent = "Last name is required.";
+      lastNameError.style.display = "block";
+      hasError = true;
+    } else {
+      lastNameError.textContent = "";
+      lastNameError.style.display = "none";
+    }
+  
+    // Validasi Email
+    const email = document.getElementById("email");
+    const emailError = document.getElementById("emailError");
+    if (email.value.trim() === "") {
+      emailError.textContent = "Email is required.";
+      emailError.style.display = "block";
+      hasError = true;
+    } else {
+      emailError.textContent = "";
+      emailError.style.display = "none";
+    }
+  
+    // Validasi Password
+    const number = document.getElementById("number");
+    const numberError = document.getElementById("numberError");
+    if (number.value.trim() === "") {
+      numberError.textContent = "Number is required.";
+      numberError.style.display = "block";
+      hasError = true;
+    } else {
+      numberError.textContent = "";
+      numberError.style.display = "none";
+    }
+
+    const message = document.getElementById("message");
+    const messageError = document.getElementById("messageError");
+    if (message.value.trim() === "") {
+      messageError.textContent = "Message is required.";
+      messageError.style.display = "block";
+      hasError = true;
+    } else {
+      messageError.textContent = "";
+      messageError.style.display = "none";
+    }
+  
+  
+    // Validasi Confirm Password
+    
+  
+    if (!hasError) {
+      Swal.fire({
+        title: "Success!",
+        text: "Akun anda berhasil dibuat",
+        icon: "success",
+        confirmButtonText: "Lanjutkan",
+      });
+    }
+  });
+
+})
+
+
+
+function scrollFunction(navbar) {
+  
 
   if (document.body.scrollTop > 80 || document.documentElement.scrollTop > 90) {
     navbar.style.backgroundColor = "rgba(255, 255, 255, 0.28);";
@@ -21,54 +139,4 @@ function scrollFunction() {
   }
 }
 
-window.onscroll = function () {
-  scrollFunction();
-};
-
-function scrollFunction() {
-  const navbar = d
-}
-
-// Untuk click navbar
-const menuIcon = document.getElementById("menu-icon");
-const menuList = document.getElementById("menu-list");
-
-
-menuIcon.addEventListener("click", () => {
-  menuList.classList.toggle("nav-ul")
-})
-
-// slider card
-const cardContainer = document.querySelector('.card-container');
-const cards = document.querySelectorAll('.card');
-
-cards.forEach(card => {
-  const clone = card.cloneNode(true);
-  cardContainer.appendChild(clone);
-});
-
-let position = 0;
-const speed = 0.5;
-
-function moveCards() {
-  position -= speed;
-
-  const totalWidth = cards[0].offsetWidth * cards.length;
-  if (Math.abs(position) >= totalWidth) {
-    position = 0;
-  }
-
-  cardContainer.style.transform = `translateX(${position}px)`;
-  requestAnimationFrame(moveCards);
-}
-
-moveCards();
-
-cardContainer.addEventListener('mouseenter', () => {
-  cardContainer.style.animationPlayState = 'paused';
-});
-
-cardContainer.addEventListener('mouseleave', () => {
-  cardContainer.style.animationPlayState = 'running';
-});
 

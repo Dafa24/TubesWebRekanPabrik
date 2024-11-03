@@ -10,6 +10,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.css"/>
 
   <link
     href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
@@ -130,31 +131,36 @@
   <!-- container 1 start -->
   <section>
     <div class="formContactUs">
-      <form action="">
+      <form id="formContact">
         <div class="nameContainer">
           <div class="firstName">
             <label for="fname">First name:</label><br />
             <input type="text" id="fname" name="fname" />
+            <span class="error" id="FnameError"></span>
           </div>
           <div class="lastName">
             <label for="lname">Last name:</label><br />
             <input type="text" id="lname" name="lname" />
+            <span class="error" id="LnameError"></span>
           </div>
         </div>
         <div class="emailContainer">
           <label for="email">email:</label><br />
           <input type="email" name="email" id="email" />
+          <span class="error" id="emailError"></span>
         </div>
         <div class="numberContainer">
           <label for="number">number:</label><br />
           <input type="text" name="number" id="number" />
+          <span class="error" id="numberError"></span>
         </div>
         <div class="massageContainer">
           <label for="number">message:</label><br />
-          <textarea name="massage" id="massage"></textarea>
+          <textarea name="massage" id="message"></textarea>
+          <span class="error" id="messageError"></span>
         </div>
       </form>
-      <button type="submit" class="btn-submit">Submit</button>
+      <button type="submit" class="btn-submit" >Submit</button>
     </div>
   </section>
   <!-- container 1 end -->
@@ -186,7 +192,7 @@
   <!-- foooter end -->
   <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
   <script src="./contactUs.js"></script>
-
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 </body>
 
 </html>
