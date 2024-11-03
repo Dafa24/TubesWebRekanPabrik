@@ -1,13 +1,16 @@
-window.onscroll = function () {
-  scrollFunction();
-};
-
-function scrollFunction() {
+document.addEventListener("DOMContentLoaded", function () {
   const navbar = document.getElementById("navbar");
 
+  window.onscroll = function () {
+    scrollFunction(navbar);
+  };
+  loadPerusahaan();
+
+});
+
+function scrollFunction(navbar) {
   if (document.body.scrollTop > 80 || document.documentElement.scrollTop > 90) {
     navbar.style.backgroundColor = "rgba(255, 255, 255, 0.28);";
-    //navbar.style.backgroundColor = "rgba(4, 41, 58, 1)";
     navbar.style.boxShadow = "0 4px 30px rgba(0, 0, 0, 0.1)";
     navbar.style.backdropFilter = "blur(7.9px)";
     navbar.style.webkitBackdropFilter = "blur(7.9px)";
@@ -21,53 +24,63 @@ function scrollFunction() {
   }
 }
 
-window.onscroll = function () {
-  scrollFunction();
-};
+function loadPerusahaan() {
+  $.getJSON('../../public/data/daftarPabrik.json', function(data) {
+    const container = $('#card-container');
+    const errorMessage = $('#error-message');
+    errorMessage.hide();
 
-function scrollFunction() {
-  const navbar = d
+    $.each(data, function(index, item) {
+      const card = `
+        <div class="card">
+          <img src="${item.img}" alt="${item.namaPerusahaan}">
+          <div class="card-content">
+            <h2>${item.namaPerusahaan}</h2>
+            <p>${item.deskripsi}</p>
+          </div>
+        </div>
+      `;
+      container.append(card);
+    });
+
+    slider();
+  }).fail(function() {
+    $('#error-message').show();
+    console.error('Error loading JSON');
+  });
 }
 
-// Untuk click navbar
-const menuIcon = document.getElementById("menu-icon");
-const menuList = document.getElementById("menu-list");
+function slider() {
+  const cardContainer = document.querySelector(".card-container");
+  const cards = document.querySelectorAll(".card");
 
+  cards.forEach((card) => {
+    const clone = card.cloneNode(true);
+    cardContainer.appendChild(clone);
+  });
 
-menuIcon.addEventListener("click", () => {
-  menuList.classList.toggle("nav-ul")
-})
+  let position = 0;
+  const speed = 0.5;
 
-// slider card
-const cardContainer = document.querySelector('.card-container');
-const cards = document.querySelectorAll('.card');
+  function moveCards() {
+    position -= speed;
 
-cards.forEach(card => {
-  const clone = card.cloneNode(true);
-  cardContainer.appendChild(clone);
-});
+    const totalWidth = cards[0].offsetWidth * cards.length;
+    if (Math.abs(position) >= totalWidth) {
+      position = 0;
+    }
 
-let position = 0;
-const speed = 0.5;
-
-function moveCards() {
-  position -= speed;
-
-  const totalWidth = cards[0].offsetWidth * cards.length;
-  if (Math.abs(position) >= totalWidth) {
-    position = 0;
+    cardContainer.style.transform = `translateX(${position}px)`;
+    requestAnimationFrame(moveCards);
   }
 
-  cardContainer.style.transform = `translateX(${position}px)`;
-  requestAnimationFrame(moveCards);
+  moveCards();
+
+  cardContainer.addEventListener("mouseenter", () => {
+    cardContainer.style.animationPlayState = "paused";
+  });
+
+  cardContainer.addEventListener("mouseleave", () => {
+    cardContainer.style.animationPlayState = "running";
+  });
 }
-
-moveCards();
-
-cardContainer.addEventListener('mouseenter', () => {
-  cardContainer.style.animationPlayState = 'paused';
-});
-
-cardContainer.addEventListener('mouseleave', () => {
-  cardContainer.style.animationPlayState = 'running';
-});
