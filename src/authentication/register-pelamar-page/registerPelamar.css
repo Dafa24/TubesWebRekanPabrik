@@ -1,115 +1,208 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
 * body,
 html {
-    margin: 0px;
-    padding: 0px;
-    text-transform: capitalize;
-    font-family: "Poppins", system-ui;
+  margin: 0px;
+  padding: 0px;
+  text-transform: capitalize;
+  font-family: "Poppins", system-ui;
 }
 
-.navbar{
-    position: fixed;
-    display: flex;
-    color: black;
-    background-color: transparent;
-    transition: 0.2s;
-    font-size: 20px;
-    font-weight: 500;
-    justify-content: space-between;
-    width: 100%;
-    top: 0;
-    overflow: hidden;
-    padding: 10px;
+.navbar {
+  position: fixed;
+  display: flex;
+  color: black;
+  background-color: transparent;
+  transition: 0.2s;
+  font-size: 20px;
+  font-weight: 500;
+  justify-content: space-between;
+  width: 100%;
+  top: 0;
+  overflow: hidden;
+  padding: 10px;
 }
 
-.nav-logo{
-    height: 100px;
+.nav-logo {
+  height: 100px;
 }
 
-.nav-ul{
-    display: flex;
-    gap: 25px;
-    margin-right: 25px;
-    align-items: center;
+.nav-ul {
+  display: flex;
+  gap: 25px;
+  margin-right: 25px;
+  align-items: center;
 }
 
 nav ul {
-    list-style: none;
-    text-decoration: none;
+  list-style: none;
+  text-decoration: none;
 }
 
 li a {
-    text-decoration: none;
-    color: black;
+  text-decoration: none;
+  color: black;
 }
 
-li a:after{
-    content: "";
-    width: 0%;
-    height: 2px;
-    display: block;
-    transition: all 0.2s ease-in-out;
-
+li a:after {
+  content: "";
+  width: 0%;
+  height: 2px;
+  display: block;
+  transition: all 0.2s ease-in-out;
 }
 
 li a:hover::after {
-    width: 100%;
-    display: block;
-    height: 3px;
-    background-color: #a86108;
+  width: 100%;
+  display: block;
+  height: 3px;
+  background-color: #a86108;
 }
 
-.lgn-btn{
-    width: 100px;
-    height: 42px;
-    border-radius: 10px;
-    border: transparent;
-    background-color: #a86108;
-    font-weight: bold;
-    color: white;
-    font-size: 20px;
-    cursor: pointer;
+.lgn-btn {
+  width: 100px;
+  height: 42px;
+  border-radius: 10px;
+  border: transparent;
+  background-color: #a86108;
+  font-weight: bold;
+  color: white;
+  font-size: 20px;
+  cursor: pointer;
 }
 
-.margintop{
-    margin-top: 900px;
+.containerSatu {
+  text-align: center;
+  margin-top: 150px;
 }
 
+.containerSatu h1 {
+  color: #a86108;
+  font-size: 64px;
+  margin-bottom: 0px;
+}
+
+.containerSatu p {
+  color: #ad9f9f;
+  font-size: 24px;
+  margin-top: 0px;
+}
+
+.containerDua {
+  margin-top: 50px;
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.nameContainer,
+.emailContainer,
+.passwordContainer,
+.confirmPassContainer {
+  margin-top: 20px;
+}
+
+.nameContainer {
+  display: flex;
+  justify-content: space-between;
+}
+
+.nameContainer div {
+  text-align: left;
+}
+
+.emailContainer input,
+.passwordContainer input,
+.confirmPassContainer input {
+  width: 431px;
+  height: 40px;
+  border: 2px solid #ad9f9f;
+  border-radius: 8px;
+  font-size: 15px;
+}
+
+.nameContainer input {
+  width: 200px;
+  height: 40px;
+  border: 2px solid #ad9f9f;
+  border-radius: 8px;
+  font-size: 15px;
+}
+
+.nameContainer,
+div,
+label,
+.emailContainer label,
+.passwordContainer label,
+.confirmPassContainer label {
+  font-size: 20px;
+  font-weight: 500;
+}
+
+.imgContainer img {
+  width: 500px;
+}
+
+.btn-Container {
+  margin-top: 30px;
+  display: flex;
+  justify-content: center;
+}
+
+.btn-Container button {
+  width: 225px;
+  height: 40px;
+  background-color: #a86108;
+  cursor: pointer;
+  border-radius: 8px;
+  border: transparent;
+  color: white;
+  font-size: 16px;
+}
+
+.margintop {
+  margin-top: 100px;
+}
 
 .footer {
-    margin-top: 100px;
-    background-color: white;
-    padding: 20px;
-    color: #a86108;
-    display: flex;
-    align-items: flex-start;
-    justify-content: space-between;
-    flex-wrap: wrap;
-  }
-  
-  .p-address {
-    width: 350px;
-  }
-  
-  .icon{
-    display: flex;
-    gap: 15px;
-  }
-  
-  .grommet-icons--instagram {
-    display: inline-block;
-    width: 2em;
-    height: 2em;
-    background-repeat: no-repeat;
-    background-size: 100% 100%;
-    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath fill='%23a86108' d='M17.318.077c1.218.056 2.06.235 2.838.537a5.4 5.4 0 0 1 1.956 1.274a5.4 5.4 0 0 1 1.274 1.956c.302.779.481 1.62.537 2.838C23.992 8.192 24 8.724 24 12s-.008 3.808-.077 5.318c-.056 1.218-.235 2.06-.537 2.839a5.4 5.4 0 0 1-1.274 1.955a5.4 5.4 0 0 1-1.956 1.274c-.779.302-1.62.481-2.838.537c-1.51.069-2.041.077-5.318.077s-3.809-.008-5.318-.077c-1.218-.056-2.06-.235-2.839-.537a5.4 5.4 0 0 1-1.955-1.274a5.4 5.4 0 0 1-1.274-1.956c-.302-.779-.481-1.62-.537-2.838C.008 15.81 0 15.278 0 12s.008-3.81.077-5.318c.056-1.218.235-2.06.537-2.838a5.4 5.4 0 0 1 1.274-1.956A5.4 5.4 0 0 1 3.843.614C4.623.312 5.464.133 6.682.077C8.19.008 8.722 0 12 0s3.81.008 5.318.077M12 2.667c-3.24 0-3.736.007-5.197.074c-.927.042-1.483.16-1.994.359c-.435.17-.712.35-1.036.673S3.27 4.374 3.1 4.81c-.198.51-.317 1.067-.359 1.994c-.067 1.46-.074 1.956-.074 5.196s.007 3.736.074 5.197c.042.927.16 1.483.359 1.993c.17.436.35.713.673 1.037s.601.504 1.036.673c.51.198 1.067.317 1.994.359c1.462.067 1.958.074 5.197.074c3.24 0 3.735-.007 5.197-.074c.927-.042 1.483-.16 1.994-.359c.435-.17.712-.35 1.036-.673s.504-.601.673-1.036c.198-.51.317-1.067.359-1.994c.067-1.462.074-1.958.074-5.197s-.007-3.735-.074-5.197c-.042-.927-.16-1.483-.359-1.993a2.7 2.7 0 0 0-.673-1.037A2.7 2.7 0 0 0 19.19 3.1c-.51-.198-1.067-.317-1.994-.359c-1.461-.067-1.957-.074-5.197-.074m0 15.555a6.222 6.222 0 1 1 0-12.444a6.222 6.222 0 0 1 0 12.444m0-2.666a3.556 3.556 0 1 0 0-7.112a3.556 3.556 0 0 0 0 7.112m6.222-8.445a1.333 1.333 0 1 1 0-2.667a1.333 1.333 0 0 1 0 2.667'/%3E%3C/svg%3E");
-  }
-  
-  .el--linkedin {
-    display: inline-block;
-    width: 2em;
-    height: 2em;
-    background-repeat: no-repeat;
-    background-size: 100% 100%;
-    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1200 1200'%3E%3Cpath fill='%23a86108' d='M0 0v1200h1200V0zm294.287 235.913c47.53.535 94.35 33.325 96.387 90.088c1.016 50.475-42.971 88.921-97.632 90.088h-1.318c-47.057-.543-93.012-34.156-95.142-90.088c.671-49.913 42.627-88.904 97.705-90.088M804.199 474.39c52.255.324 101.572 15.826 142.09 57.13c42.106 46.96 55.624 111.71 57.129 177.538v299.414H830.859V729.419c-.384-52.302-18.3-115.877-87.524-117.993c-40.571.432-69.18 24.007-88.77 63.428c-5.348 12.688-6.118 27.273-6.372 41.821v291.797H475.708c.66-145.877 1.567-291.743 1.245-437.622c0-41.438-.399-69.34-1.245-83.716h172.485v73.535c14.641-20.823 30.879-40.571 52.66-56.47c29.545-21.085 65.036-29.168 103.346-29.809m-597.436 12.744h172.485v521.338H206.763z'/%3E%3C/svg%3E");
-  }
+  margin-top: 100px;
+  background-color: white;
+  padding: 20px;
+  color: #a86108;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.p-address {
+  width: 350px;
+}
+
+.icon {
+  display: flex;
+  gap: 15px;
+}
+
+.grommet-icons--instagram {
+  display: inline-block;
+  width: 2em;
+  height: 2em;
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath fill='%23a86108' d='M17.318.077c1.218.056 2.06.235 2.838.537a5.4 5.4 0 0 1 1.956 1.274a5.4 5.4 0 0 1 1.274 1.956c.302.779.481 1.62.537 2.838C23.992 8.192 24 8.724 24 12s-.008 3.808-.077 5.318c-.056 1.218-.235 2.06-.537 2.839a5.4 5.4 0 0 1-1.274 1.955a5.4 5.4 0 0 1-1.956 1.274c-.779.302-1.62.481-2.838.537c-1.51.069-2.041.077-5.318.077s-3.809-.008-5.318-.077c-1.218-.056-2.06-.235-2.839-.537a5.4 5.4 0 0 1-1.955-1.274a5.4 5.4 0 0 1-1.274-1.956c-.302-.779-.481-1.62-.537-2.838C.008 15.81 0 15.278 0 12s.008-3.81.077-5.318c.056-1.218.235-2.06.537-2.838a5.4 5.4 0 0 1 1.274-1.956A5.4 5.4 0 0 1 3.843.614C4.623.312 5.464.133 6.682.077C8.19.008 8.722 0 12 0s3.81.008 5.318.077M12 2.667c-3.24 0-3.736.007-5.197.074c-.927.042-1.483.16-1.994.359c-.435.17-.712.35-1.036.673S3.27 4.374 3.1 4.81c-.198.51-.317 1.067-.359 1.994c-.067 1.46-.074 1.956-.074 5.196s.007 3.736.074 5.197c.042.927.16 1.483.359 1.993c.17.436.35.713.673 1.037s.601.504 1.036.673c.51.198 1.067.317 1.994.359c1.462.067 1.958.074 5.197.074c3.24 0 3.735-.007 5.197-.074c.927-.042 1.483-.16 1.994-.359c.435-.17.712-.35 1.036-.673s.504-.601.673-1.036c.198-.51.317-1.067.359-1.994c.067-1.462.074-1.958.074-5.197s-.007-3.735-.074-5.197c-.042-.927-.16-1.483-.359-1.993a2.7 2.7 0 0 0-.673-1.037A2.7 2.7 0 0 0 19.19 3.1c-.51-.198-1.067-.317-1.994-.359c-1.461-.067-1.957-.074-5.197-.074m0 15.555a6.222 6.222 0 1 1 0-12.444a6.222 6.222 0 0 1 0 12.444m0-2.666a3.556 3.556 0 1 0 0-7.112a3.556 3.556 0 0 0 0 7.112m6.222-8.445a1.333 1.333 0 1 1 0-2.667a1.333 1.333 0 0 1 0 2.667'/%3E%3C/svg%3E");
+}
+
+.el--linkedin {
+  display: inline-block;
+  width: 2em;
+  height: 2em;
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1200 1200'%3E%3Cpath fill='%23a86108' d='M0 0v1200h1200V0zm294.287 235.913c47.53.535 94.35 33.325 96.387 90.088c1.016 50.475-42.971 88.921-97.632 90.088h-1.318c-47.057-.543-93.012-34.156-95.142-90.088c.671-49.913 42.627-88.904 97.705-90.088M804.199 474.39c52.255.324 101.572 15.826 142.09 57.13c42.106 46.96 55.624 111.71 57.129 177.538v299.414H830.859V729.419c-.384-52.302-18.3-115.877-87.524-117.993c-40.571.432-69.18 24.007-88.77 63.428c-5.348 12.688-6.118 27.273-6.372 41.821v291.797H475.708c.66-145.877 1.567-291.743 1.245-437.622c0-41.438-.399-69.34-1.245-83.716h172.485v73.535c14.641-20.823 30.879-40.571 52.66-56.47c29.545-21.085 65.036-29.168 103.346-29.809m-597.436 12.744h172.485v521.338H206.763z'/%3E%3C/svg%3E");
+}
+
+.error {
+  color: red;
+  font-size: 12px;
+  margin-top: 5px;
+  display: none;
+}
