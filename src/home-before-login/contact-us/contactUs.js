@@ -39,12 +39,12 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 
   formContact.addEventListener("submit", function (event) {
-    event.preventDefault(); // Mencegah pengiriman form jika ada error
+    event.preventDefault(); 
   
     let hasError = false;
   
     // Validasi First Name
-    const firstName = document.getElementById("Fname");
+    const firstName = document.getElementById("fname");
     const firstNameError = document.getElementById("FnameError");
     if (firstName.value.trim() === "") {
       firstNameError.textContent = "First name is required.";
@@ -56,7 +56,7 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   
     // Validasi Last Name
-    const lastName = document.getElementById("Lname");
+    const lastName = document.getElementById("lname");
     const lastNameError = document.getElementById("LnameError");
     if (lastName.value.trim() === "") {
       lastNameError.textContent = "Last name is required.";
@@ -101,15 +101,11 @@ document.addEventListener("DOMContentLoaded", () => {
       messageError.textContent = "";
       messageError.style.display = "none";
     }
-  
-  
-    // Validasi Confirm Password
-    
-  
+
     if (!hasError) {
       Swal.fire({
         title: "Success!",
-        text: "Akun anda berhasil dibuat",
+        text: "Pengaduan Anda Akan Kami Proses",
         icon: "success",
         confirmButtonText: "Lanjutkan",
       });
@@ -138,5 +134,3 @@ function scrollFunction(navbar) {
     navbar.style.border = "";
   }
 }
-
-
