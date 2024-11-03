@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./report.css">
+    <title>Report Page</title>
+</head>
+<body>
+    <nav class="navbar">
+        <a href="../home/home.html" class="brand">Admin REKAN PABRIK</a>
+        <div class="nav-container">
+            <div class="nav-links">
+                <a href="../users/user.html" class="nav-item">
+                    User
+                </a>
+                <a href="../report/report.html" class="nav-item">
+                    Laporan
+                </a>
+                <a href="../profile/profile.html" class="nav-item">
+                    Profil
+                </a>
+            </div>
+        </div>
+        <div class="logout-container">
+            <a href="#" class="nav-item logout">
+                Logout
+            </a>
+        </div>
+    </nav>
+    <div class="container">
+        <h1>Laporan Pendaftaran Pekerjaan</h1>
+        
+        <div class="search-box">
+            <input type="text" id="searchInput" placeholder="Cari berdasarkan nama atau posisi...">
+            <select id="statusFilter" class="status-filter">
+                <option value="all">Semua Status</option>
+                <option value="Pending">Pending</option>
+                <option value="Interview">Interview</option>
+                <option value="Diterima">Diterima</option>
+                <option value="Ditolak">Ditolak</option>
+            </select>
+        </div>
+
+        <table id="jobTable">
+            <thead>
+                <tr>
+                    <th>Nama</th>
+                    <th>Nomor Telepon</th>
+                    <th>Posisi</th>
+                    <th>Status</th>
+                </tr>
+            </thead>
+            <tbody id="tableBody">
+            </tbody>
+        </table>
+    </div>
+    <script src="./report.js"></script>
+</body>
+</html>
