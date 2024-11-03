@@ -71,10 +71,9 @@ li a:hover::after {
   cursor: pointer;
 }
 
-
 .zero-section {
   width: 100%;
-  height: 100vh;
+  height: 100%;
   background-color: #ecca9c;
   margin-top: 100px;
   display: flex;
@@ -93,20 +92,92 @@ li a:hover::after {
   font-weight: bold;
 }
 
+.slider-wrapper {
+  overflow: hidden;
+  max-width: 1200px;
+  margin: 0 70px 55px;
+}
+
+.card-list .card-item {
+  color: #fff;
+  user-select: none;
+  padding: 35px;
+  border-radius: 8px;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  display: flex;
+  background: rgba(255, 255, 255, 0.2);
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  backdrop-filter: blur(30px);
+}
+
+.card-list .card-item .user-image {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  margin-bottom: 40px;
+  padding: 4px;
+  object-fit: cover;
+}
+.card-list .card-item .user-profession {
+  font-size: 1.15rem;
+  color: #a86108;
+  margin: 14px 0 40px;
+  font-weight: 500;
+}
+.card-list .card-item .message-button {
+  font-size: 1.25rem;
+  padding: 10px 35px;
+  color: #030728;
+  border-radius: 6px;
+  font-weight: 500;
+  cursor: pointer;
+  border: 1px solid transparent;
+  background: #fff;
+  transition: 0.4s ease;
+}
+.card-list .card-item .message-button:hover {
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid #fff;
+  color: #fff;
+}
+.slider-wrapper .swiper-pagination-bullet {
+  background: #a86108;
+  height: 15px;
+  width: 15px;
+}
+.slider-wrapper .swiper-slide-button {
+  color: #fff;
+  margin-top: -50px;
+  transition: 0.4s ease;
+}
+.slider-wrapper .swiper-slide-button:hover {
+  color: #4658ff;
+}
+@media (max-width: 768px) {
+  .slider-wrapper {
+    margin: 0 10px 40px;
+  }
+  .slider-wrapper .swiper-slide-button {
+    display: none;
+  }
+}
+
 .containerZeroSectionTXT h2 {
   margin: 0px;
 }
 
-.description{
+.description {
   display: flex;
   flex-direction: column;
   align-items: center;
+  padding: 30px;
 }
 .zeroSection-TXT {
   width: 900px;
   font-size: 20px;
   margin: 0px;
-
 }
 
 .formContactUs {
@@ -209,86 +280,6 @@ li a:hover::after {
   background-repeat: no-repeat;
   background-size: 100% 100%;
   background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1200 1200'%3E%3Cpath fill='%23a86108' d='M0 0v1200h1200V0zm294.287 235.913c47.53.535 94.35 33.325 96.387 90.088c1.016 50.475-42.971 88.921-97.632 90.088h-1.318c-47.057-.543-93.012-34.156-95.142-90.088c.671-49.913 42.627-88.904 97.705-90.088M804.199 474.39c52.255.324 101.572 15.826 142.09 57.13c42.106 46.96 55.624 111.71 57.129 177.538v299.414H830.859V729.419c-.384-52.302-18.3-115.877-87.524-117.993c-40.571.432-69.18 24.007-88.77 63.428c-5.348 12.688-6.118 27.273-6.372 41.821v291.797H475.708c.66-145.877 1.567-291.743 1.245-437.622c0-41.438-.399-69.34-1.245-83.716h172.485v73.535c14.641-20.823 30.879-40.571 52.66-56.47c29.545-21.085 65.036-29.168 103.346-29.809m-597.436 12.744h172.485v521.338H206.763z'/%3E%3C/svg%3E");
-}
-.slider-wrapper{
-    overflow: hidden;
-    max-width: 1200px;
-    margin: 0 70px 55px;
-}
-
-.slider-wrapper{
-  overflow: hidden;
-  max-width: 1200px;
-  margin: 0 70px 55px;
-}
-
-.card-list .card-item{
-  color: #fff;
-  user-select: none;
-  padding: 35px;
-  border-radius: 8px;
-  justify-content: center;
-  flex-direction: column;
-  align-items: center;
-  display: flex;
-  background: rgba(255, 255, 255, 0.2);
-  border: 1px solid rgba(255, 255, 255, 0.5) ;
-  backdrop-filter: blur(30px);
-}
-
-.card-list .card-item .user-image{
-  width: 150px;
-  height: 150px;
-  border-radius: 50%;
-  margin-bottom: 40px;
-  padding: 4px;
-  object-fit: cover;
-
-}
-.card-list .card-item .user-profession{
-  font-size: 1.15rem;
-  color: #a86108;
-  margin: 14px 0 40px;
-  font-weight: 500;
-}
-.card-list .card-item .message-button{
-  font-size: 1.25rem;
-  padding: 10px 35px;
-  color: #030728;
-  border-radius: 6px;
-  font-weight: 500;
-  cursor: pointer;
-  border:  1px solid transparent;
-  background: #fff;
-  transition: 0.4s ease;
-}
-.card-list .card-item .message-button:hover{
-  background: rgba(255, 255, 255, 0.1);
-  border:  1px solid #fff;
-  color: #fff;
-  
-}
-.slider-wrapper .swiper-pagination-bullet{
-  background: #a86108;
-  height: 15px;
-  width: 15px;
-}
-.slider-wrapper .swiper-slide-button {
-  color: #fff;
-  margin-top: -50px;
-  transition: 0.4s ease;
-  
-}
-.slider-wrapper .swiper-slide-button:hover{
-  color: #4658ff;
-}
-@media(max-width: 768px){
-  .slider-wrapper {
-      margin: 0 10px 40px;
-  }
-  .slider-wrapper .swiper-slide-button{
-      display: none;
-  }
 }
 
 .error {
