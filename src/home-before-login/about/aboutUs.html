@@ -19,11 +19,8 @@
   <header>
     <nav class="navbar" id="navbar">
       <a href="/src/home-before-login/home/HomeBFLogin.html">
-        <img src="/src/assets/img/logoRekanPabrik.png" alt="" class="nav-logo" />
+        <img src="../../public/img/logoRekanPabrik.png" alt="" class="nav-logo" />
       </a>
-      <div id="menu-icon" class="menu-icon">
-        <i class="ph ph-list"></i>
-      </div>
       <ul class="nav-ul" id="menu-list">
         <li class="nav-li">
           <a href="/src/home-before-login/about/aboutUs.html" class="nav-a">about us</a>
@@ -46,7 +43,7 @@
   <section>
     <div class="zero-section">
       <div class="zero-section-container">
-        <img src="/src/assets/img/logoRekanPabrik.png" alt="" class="img-zeroSection" />
+        <img src="../../public/img/logoRekanPabrik.png" alt="" class="img-zeroSection" />
         <div class="containerZeroSectionTXT">
           <h1 class="zeroSection-h1">About <span>RekanPabrik</span></h1>
           <p class="zeroSection-TXT">
@@ -106,7 +103,7 @@
   <section>
     <div class="container-Tiga">
       <div class="container-Tiga-isi">
-        <img src="../../assets/img/zeroSectionIMG-04.png" alt="" class="container-Tiga-img" />
+        <img src="../../public/img/zeroSectionIMG-04.png" alt="" class="container-Tiga-img" />
         <div class="container-Tiga-txt">
           <h1 class="container-Tiga-h1">With Us, Achieve Your Best Career!</h1>
           <p class="container-Tiga-p">Join Factory Associates and find the career opportunity that's right for you.
@@ -122,17 +119,14 @@
 
   <!-- Slider Card bergerak -->
   <div class="slider-container">
-    <div class="card-container">
-      <!-- Card 1 -->
-      <div class="card">
+    <div class="card-container" id="card-container">
+      <!-- <div class="card">
         <img src="/src/assets/img/Logo_AHM.png" alt="Gambar 1">
         <div class="card-content">
           <h2>PT. Astra Honda Motor</h2>
           <p>Astra Honda motor merupakan salah ...</p>
         </div>
       </div>
-
-      <!-- Card 2 -->
       <div class="card">
         <img src="/src/assets/img/gudang_garam.png" alt="Gambar 2">
         <div class="card-content">
@@ -141,7 +135,6 @@
         </div>
       </div>
 
-      <!-- Card 3 -->
       <div class="card">
         <img src="/src/assets/img/sampoerna.png" alt="Gambar 3">
         <div class="card-content">
@@ -150,7 +143,6 @@
         </div>
       </div>
 
-      <!-- Card 4 -->
       <div class="card">
         <img src="/src/assets/img/unilever.png" alt="Gambar 4">
         <div class="card-content">
@@ -159,15 +151,15 @@
         </div>
       </div>
 
-      <!-- Card 5 -->
       <div class="card">
         <img src="/src/public/img/indofood.jpg" alt="Gambar 5">
         <div class="card-content">
           <h2>Indofood</h2>
           <p>Indomie selera ku...</p>
         </div>
-      </div>
+      </div> -->
     </div>
+    <p id="error-message" style="display: none;  text-align: center;">Not Found</p>
   </div>
 
   <!-- footer start -->
@@ -176,7 +168,7 @@
       <h1 class="h1-address">Address</h1>
       <p class="p-address">
         Gedung Panehan Pasca Sarjana Lantai 1,Jl. Telekomunikasi Terusan Buah
-        Batu, Bandung - 40257, Indonesia
+        Batu, Bandung - 40257, Indonesia
       </p>
     </div>
     <div class="gambar">
@@ -197,6 +189,7 @@
   <!-- foooter end -->
 
   <script src="./aboutUs.js"></script>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 </body>
 
 </html>

@@ -2,31 +2,36 @@
   {
     "id": 1,
     "img": "http://127.0.0.1:5501/src/public/img/Logo_AHM.png",
-    "namaPerusahaan": "test1",
-    "jumlahPekerjaan": 10
+    "namaPerusahaan": "PT Astra Honda Motor",
+    "deskripsi": "Perusahaan manufaktur sepeda motor terbesar di Indonesia, fokus pada produk berkualitas dan inovatif.",
+    "jumlahPekerjaan": 15
   },
   {
     "id": 2,
     "img": "http://127.0.0.1:5501/src/public/img/Logo_AHM.png",
-    "namaPerusahaan": "test2",
-    "jumlahPekerjaan": 10
+    "namaPerusahaan": "PT Gudang Garam Tbk",
+    "deskripsi": "Produsen rokok terkemuka di Indonesia, terkenal dengan kualitas dan inovasi produk di industri tembakau.",
+    "jumlahPekerjaan": 8
   },
   {
     "id": 3,
     "img": "http://127.0.0.1:5501/src/public/img/Logo_AHM.png",
-    "namaPerusahaan": "test3",
-    "jumlahPekerjaan": 10
+    "namaPerusahaan": "PT HM Sampoerna Tbk",
+    "deskripsi": "Salah satu produsen rokok terbesar di Indonesia, berkomitmen pada inovasi dan kepuasan konsumen.",
+    "jumlahPekerjaan": 12
   },
   {
     "id": 4,
     "img": "http://127.0.0.1:5501/src/public/img/Logo_AHM.png",
-    "namaPerusahaan": "test4",
-    "jumlahPekerjaan": 10
+    "namaPerusahaan": "PT Unilever Indonesia Tbk",
+    "deskripsi": "Perusahaan multinasional yang memproduksi kebutuhan sehari-hari, termasuk makanan, minuman, dan produk kebersihan.",
+    "jumlahPekerjaan": 20
   },
   {
     "id": 5,
     "img": "http://127.0.0.1:5501/src/public/img/Logo_AHM.png",
-    "namaPerusahaan": "test5",
-    "jumlahPekerjaan": 10
+    "namaPerusahaan": "PT Indofood Sukses Makmur Tbk",
+    "deskripsi": "Perusahaan makanan terbesar di Indonesia, terkenal dengan berbagai merek produk makanan dan minuman.",
+    "jumlahPekerjaan": 18
   }
 ]
