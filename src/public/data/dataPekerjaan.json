@@ -1,0 +1,72 @@
+[
+  {
+    "id": 1,
+    "judulPekerjaan": "Software Engineer",
+    "lokasi": "Jakarta",
+    "perusahaan": "PT Tech Solutions",
+    "tanggalDiposting": "2024-10-01"
+  },
+  {
+    "id": 2,
+    "judulPekerjaan": "Product Manager",
+    "lokasi": "Bandung",
+    "perusahaan": "PT Kreatif Nusantara",
+    "tanggalDiposting": "2024-10-03"
+  },
+  {
+    "id": 3,
+    "judulPekerjaan": "UI/UX Designer",
+    "lokasi": "Surabaya",
+    "perusahaan": "CV Visual Studio",
+    "tanggalDiposting": "2024-10-05"
+  },
+  {
+    "id": 4,
+    "judulPekerjaan": "Data Scientist",
+    "lokasi": "Yogyakarta",
+    "perusahaan": "PT Data Insight",
+    "tanggalDiposting": "2024-10-07"
+  },
+  {
+    "id": 5,
+    "judulPekerjaan": "Digital Marketing Specialist",
+    "lokasi": "Jakarta",
+    "perusahaan": "PT Media Kreatif",
+    "tanggalDiposting": "2024-10-09"
+  },
+  {
+    "id": 6,
+    "judulPekerjaan": "Backend Developer",
+    "lokasi": "Bandung",
+    "perusahaan": "PT Backend Solutions",
+    "tanggalDiposting": "2024-10-11"
+  },
+  {
+    "id": 7,
+    "judulPekerjaan": "Content Writer",
+    "lokasi": "Semarang",
+    "perusahaan": "PT Kreasi Konten",
+    "tanggalDiposting": "2024-10-13"
+  },
+  {
+    "id": 8,
+    "judulPekerjaan": "Human Resources Manager",
+    "lokasi": "Malang",
+    "perusahaan": "PT HR Indonesia",
+    "tanggalDiposting": "2024-10-15"
+  },
+  {
+    "id": 9,
+    "judulPekerjaan": "Finance Analyst",
+    "lokasi": "Denpasar",
+    "perusahaan": "PT Finance Hub",
+    "tanggalDiposting": "2024-10-17"
+  },
+  {
+    "id": 10,
+    "judulPekerjaan": "Project Manager",
+    "lokasi": "Makassar",
+    "perusahaan": "PT Proyek Nusantara",
+    "tanggalDiposting": "2024-10-19"
+  }
+]

@@ -11,6 +11,10 @@
       href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
       rel="stylesheet"
     />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.css"
+    />
   </head>
   <body>
     <!-- navbar start -->
@@ -18,7 +22,7 @@
       <nav class="navbar" id="navbar">
         <a href="/src/home-before-login/home/HomeBFLogin.html">
           <img
-            src="/src/assets/img/logoRekanPabrik.png"
+            src="/src/public/img/logoRekanPabrik.png"
             alt=""
             class="nav-logo"
           />
@@ -62,37 +66,42 @@
     <section>
       <div class="containerDua">
         <div class="formContainer">
-          <form action="">
+          <form id="registrationForm">
             <div class="companyNameContainer">
-              <label for="companyname">company name</label><br />
+              <label for="companyname">Company Name</label><br />
               <input type="text" name="companyname" id="companyname" />
+              <span class="error" id="companynameError"></span>
             </div>
             <div class="emailContainer">
-              <label for="email">email</label><br />
+              <label for="email">Email</label><br />
               <input type="email" name="email" id="email" />
+              <span class="error" id="emailError"></span>
             </div>
             <div class="passwordContainer">
-              <label for="password">password</label><br />
+              <label for="password">Password</label><br />
               <input type="password" name="password" id="password" />
+              <span class="error" id="passwordError"></span>
             </div>
             <div class="confirmPassContainer">
-              <label for="confirmpassword">confirm password</label><br />
+              <label for="confirmpassword">Confirm Password</label><br />
               <input
                 type="password"
                 name="confirmpassword"
                 id="confirmpassword"
               />
+              <span class="error" id="confirmpasswordError"></span>
+            </div>
+            <div class="btn-Container">
+              <button type="submit">Create Account</button>
             </div>
           </form>
-          <div class="btn-Container">
-            <button type="submit">Create Account</button>
-          </div>
         </div>
         <div class="imgContainer">
-          <img src="/src/assets/img/logoRekanPabrik.png" alt="" />
+          <img src="/src/public/img/logoRekanPabrik.png" alt="" />
         </div>
       </div>
     </section>
+
     <!-- container 2 end -->
 
     <!-- footer start -->
@@ -106,7 +115,7 @@
       </div>
       <div class="gambar">
         <img
-          src="/src/assets/img/logoRekanPabrik.png"
+          src="/src/public/img/logoRekanPabrik.png"
           alt="logo rekan pabrik"
         />
       </div>
@@ -124,6 +133,7 @@
     </footer>
     <!-- foooter end -->
 
-    <script src="./registerHRD.js"></script>
+    <script src="./registerHRD.js" type="module"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
   </body>
 </html>
