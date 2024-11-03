@@ -20,33 +20,55 @@ function scrollFunction() {
     navbar.style.border = "";
   }
 }
-const swiper = new Swiper('.slider-wrapper', {
 
-  loop: true,
-  grabCursor: true,
-  spaceBetween: 30,
+window.onscroll = function () {
+  scrollFunction();
+};
 
-  pagination: {
-    el: '.swiper-pagination',
-    clickable: true,
-    dynamicBullets: true
-  },
+function scrollFunction() {
+  const navbar = d
+}
+
+// Untuk click navbar
+const menuIcon = document.getElementById("menu-icon");
+const menuList = document.getElementById("menu-list");
 
 
-  navigation: {
-    nextEl: '.swiper-button-next',
-    prevEl: '.swiper-button-prev',
-  },
-  breakpoints: {
-    0: {
-      slidesPerView: 1
-    },
-    768: {
-      slidesPerView: 2
-    },
-    1024: {
-      slidesPerView: 3
-    }
+menuIcon.addEventListener("click", () => {
+  menuList.classList.toggle("nav-ul")
+})
+
+// slider card
+const cardContainer = document.querySelector('.card-container');
+const cards = document.querySelectorAll('.card');
+
+cards.forEach(card => {
+  const clone = card.cloneNode(true);
+  cardContainer.appendChild(clone);
+});
+
+let position = 0;
+const speed = 0.5;
+
+function moveCards() {
+  position -= speed;
+
+  const totalWidth = cards[0].offsetWidth * cards.length;
+  if (Math.abs(position) >= totalWidth) {
+    position = 0;
   }
 
+  cardContainer.style.transform = `translateX(${position}px)`;
+  requestAnimationFrame(moveCards);
+}
+
+moveCards();
+
+cardContainer.addEventListener('mouseenter', () => {
+  cardContainer.style.animationPlayState = 'paused';
 });
+
+cardContainer.addEventListener('mouseleave', () => {
+  cardContainer.style.animationPlayState = 'running';
+});
+

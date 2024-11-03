@@ -1,4 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
+
 * body,
 html {
   margin: 0px;
@@ -11,7 +12,7 @@ html {
   position: fixed;
   display: flex;
   color: black;
-  background-color: transparent;
+  background-color: white;
   transition: 0.2s;
   font-size: 20px;
   font-weight: 500;
@@ -19,7 +20,12 @@ html {
   width: 100%;
   top: 0;
   overflow: hidden;
-  padding: 10px;
+}
+
+.menu-icon {
+  font-size: 36px;
+  display: none;
+  margin-right: 25px;
 }
 
 .nav-logo {
@@ -198,6 +204,7 @@ li a:hover::after {
   font-weight: 300;
   color: #828282;
 }
+
 .container-Tiga {
   margin-top: 100px;
   display: flex;
@@ -228,6 +235,80 @@ li a:hover::after {
   width: 450px;
 }
 
+.slider-container {
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+}
+
+.card-container {
+  display: flex;
+  gap: 20px;
+  padding: 20px;
+  transition: transform 0.3s ease;
+}
+
+.card {
+  width: 300px; 
+  height: 400px;
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  overflow: hidden;
+  flex-shrink: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+.card-image {
+  width: 100%;
+  height: 200px;
+  overflow: hidden;
+}
+
+.card-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; 
+}
+
+.card-content {
+  padding: 15px;
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.card-content h2 {
+  margin: 0 0 10px 0;
+  font-size: 1.5em;
+  color: #333;
+}
+
+.card-content p {
+  margin: 0;
+  color: #666;
+  line-height: 1.5;
+}
+
+/* Animasi untuk smooth scrolling */
+@keyframes scroll {
+  0% {
+      transform: translateX(0);
+  }
+  100% {
+      transform: translateX(-100%);
+  }
+}
+
+/* Hover effect pada card */
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 12px rgba(0,0,0,0.15);
+  transition: all 0.3s ease;
+}
+
 .footer {
   margin-top: 100px;
   background-color: white;
@@ -243,7 +324,7 @@ li a:hover::after {
   width: 350px;
 }
 
-.icon{
+.icon {
   display: flex;
   gap: 15px;
 }
@@ -264,4 +345,79 @@ li a:hover::after {
   background-repeat: no-repeat;
   background-size: 100% 100%;
   background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1200 1200'%3E%3Cpath fill='%23a86108' d='M0 0v1200h1200V0zm294.287 235.913c47.53.535 94.35 33.325 96.387 90.088c1.016 50.475-42.971 88.921-97.632 90.088h-1.318c-47.057-.543-93.012-34.156-95.142-90.088c.671-49.913 42.627-88.904 97.705-90.088M804.199 474.39c52.255.324 101.572 15.826 142.09 57.13c42.106 46.96 55.624 111.71 57.129 177.538v299.414H830.859V729.419c-.384-52.302-18.3-115.877-87.524-117.993c-40.571.432-69.18 24.007-88.77 63.428c-5.348 12.688-6.118 27.273-6.372 41.821v291.797H475.708c.66-145.877 1.567-291.743 1.245-437.622c0-41.438-.399-69.34-1.245-83.716h172.485v73.535c14.641-20.823 30.879-40.571 52.66-56.47c29.545-21.085 65.036-29.168 103.346-29.809m-597.436 12.744h172.485v521.338H206.763z'/%3E%3C/svg%3E");
+}
+
+@media only screen and (max-width : 768px) {
+  .navbar {
+    flex-wrap: wrap;
+    top: 0;
+  }
+
+  nav ul {
+    flex-direction: column;
+    width: 100%;
+    text-align: center;
+  }
+
+  .menu-icon {
+    display: flex;
+    align-items: center;
+  }
+
+  /* .zero-section {
+    background-size: cover; 
+   background-repeat: no-repeat;
+   background-position: center;
+  } */
+
+  nav ul.nav-ul{
+    display: none;
+  }
+}
+
+@media only screen and (max-width: 1024px) {
+  .zero-section-container {
+    flex-direction: column;
+    gap: 50px;
+  }
+  
+  .zeroSection-h1 {
+    font-size: 36px;
+    width: 100%;
+    text-align: center;
+  }
+  
+  .zeroSection-TXT {
+    font-size: 18px;
+    width: 100%;
+    padding: 0 20px;
+    text-align: center;
+  }
+  
+  .containerSatu p,
+  .containerDua li,
+  .container-Tiga-txt p {
+    font-size: 20px;
+    width: 100%;
+    padding: 0 20px;
+    text-align: center;
+  }
+  
+  .container-Tiga-isi {
+    flex-direction: column;
+    gap: 30px;
+  }
+  
+  .container-Tiga-txt h1 {
+    font-size: 32px;
+    width: 100%;
+    text-align: center;
+  }
+  
+  .img-zeroSection,
+  .container-Tiga-img {
+    width: 80%;
+    max-width: 400px;
+    height: auto;
+  }
 }
