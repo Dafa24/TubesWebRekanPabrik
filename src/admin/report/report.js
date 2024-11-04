@@ -78,21 +78,21 @@ function getStatusClass(status) {
 }
 
 // Fungsi untuk filter dan pencarian data
-function filterData() {
-    const searchTerm = document.getElementById('searchInput').value.toLowerCase();
-    const statusFilter = document.getElementById('statusFilter').value;
+    function filterData() {
+        const searchTerm = document.getElementById('searchInput').value.toLowerCase();
+        const statusFilter = document.getElementById('statusFilter').value;
 
-    const filteredData = jobApplications.filter(item => {
-        const matchSearch = item.nama.toLowerCase().includes(searchTerm) ||
-                          item.posisi.toLowerCase().includes(searchTerm);
-        const matchStatus = statusFilter === 'all' || item.status === statusFilter;
-        return matchSearch && matchStatus;
-    });
+        const filteredData = jobApplications.filter(item => {
+            const matchSearch = item.nama.toLowerCase().includes(searchTerm) ||
+                            item.posisi.toLowerCase().includes(searchTerm);
+            const matchStatus = statusFilter === 'all' || item.status === statusFilter;
+            return matchSearch && matchStatus;
+        });
 
-    displayData(filteredData);
-}
+        displayData(filteredData);
+    }
 
-// Event listeners
+// Event listener
 document.getElementById('searchInput').addEventListener('input', filterData);
 document.getElementById('statusFilter').addEventListener('change', filterData);
 
