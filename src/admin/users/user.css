@@ -257,3 +257,52 @@ h1 {
 .delete-btn {
     background-color: #ff4d4d; /* Warna merah untuk tombol delete */
 }
+
+.modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.5);
+    z-index: 1000;
+}
+
+.modal-content {
+    background-color: white;
+    margin: 15% auto;
+    padding: 20px;
+    border-radius: 5px;
+    width: 50%;
+    max-width: 500px;
+}
+
+.close {
+    float: right;
+    cursor: pointer;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.close:hover {
+    color: red;
+}
+
+.detail-btn {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 3px;
+    cursor: pointer;
+    margin-right: 5px;
+}
+
+.detail-btn:hover {
+    background-color: #45a049;
+}
+
+.user-info {
+    margin: 10px 0;
+}

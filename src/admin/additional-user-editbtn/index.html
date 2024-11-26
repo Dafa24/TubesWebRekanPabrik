@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Daftar Admin</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Daftar Admin Table -->
+        <h1>Daftar Admin</h1>
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Name</th>
+                    <th>Email</th>
+                    <th>Action</th>
+                </tr>
+            </thead>
+            <tbody id="adminTableBody">
+                <!-- Data will be loaded here dynamically -->
+            </tbody>
+        </table>
+    </div>
+
+    <!-- Modal -->
+    <div id="userModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>User Details</h2>
+            <div id="userDetails">
+                <div class="detail-row">
+                    <strong>ID:</strong>
+                    <span id="userId"></span>
+                </div>
+                <div class="detail-row">
+                    <strong>Name:</strong>
+                    <span id="userName"></span>
+                </div>
+                <div class="detail-row">
+                    <strong>Email:</strong>
+                    <span id="userEmail"></span>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
